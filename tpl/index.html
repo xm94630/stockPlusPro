@@ -1,0 +1,96 @@
+<html>
+<head>
+<link rel="stylesheet" href='static/css/style.css' />
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+</head>
+<body>
+    <div class="bar">{{ timeInfo }}</div>
+    <ul id="navigation" class="navigationBox">
+    {% for item in data %}
+
+
+        <!-- 定义函数 -->
+        {% macro recommendFun(title) -%}
+            {{ caller() }} 
+            {% if item.stockPoolInfo.level == 1 %}
+                <img class="LevelImg" src="./static/img/L1.png"> 
+            {% elif item.stockPoolInfo.level == 2 %}
+                <img class="LevelImg" src="./static/img/L2.png">
+            {% elif item.stockPoolInfo.level == 3 %}
+                <img class="LevelImg" src="./static/img/L3.png">
+            {% else %}
+                <!-- 不处理 -->
+            {% endif %}
+        {%- endmacro %}
+        
+        <!-- 定义函数 -->
+        {% macro recommendFun2(title) -%}
+            {{ caller() }} 
+            {% if item.stockPoolInfo.level  %}
+                <div class="recommendBox">[{{item.stockPoolInfo.type}}] L{{item.stockPoolInfo.level}} 备注 @ {{item.stockPoolInfo.advantage}}</div>
+            {% else %}
+                <!-- 不处理 -->
+            {% endif %}
+        {%- endmacro %}
+
+
+
+        {% if item.halt == True %}
+            <li>
+                <a target="_blank" href="https://xueqiu.com/S/{{ item.symbol }}">#{{item.industryId}} 【{{item.industryName}}】{{ item.name }} 【{{ item.symbol }}】[￥{{item.lows[1]}} ]  PB:{{item.info.pb}}</a> 停牌 <span class="ttmBox">TTM:{{item.info.pe_ttm}}</span>
+            </li>
+            <!-- 停牌的也不要 -->
+        {% elif -999 in item.lows[0] %}
+            <!-- 过滤数据不全的,只要在数组中存在一个-999就是不全的 -->
+        {% elif item.percents[0][0]>1 or item.percents[0][1]>1 or item.percents[0][2]>1 or item.percents[0][3]>1 or item.percents[0][4]>1 or item.percents[0][5]>1 or item.percents[1]>1 %}
+            <!-- 过滤卖点占比超过1的 -->
+        {% else %}
+            <li>
+                {% if item.profit[1]>0 %}
+                    <a target="_blank" href="https://xueqiu.com/S/{{ item.symbol }}">#{{item.industryId}} 【{{item.industryName}}】{{ item.name }} 【{{ item.symbol }}】[￥{{item.lows[1]}} ]  PB:{{item.info.pb}}</a> <span class="ttmBox">TTM:{{item.info.pe_ttm}} {% call recommendFun(item.stockPoolInfo) %} {% endcall %}</span> 
+                {% else %}
+                    <a class="C1" target="_blank" href="https://xueqiu.com/S/{{ item.symbol }}">#{{item.industryId}} 【{{item.industryName}}】{{ item.name }}【{{ item.symbol }}】[￥{{item.lows[1]}} ]  PB:{{item.info.pb}}</a> <span class="ttmBox">TTM:{{item.info.pe_ttm}}</span> 
+                {% endif %}
+                
+                {% call recommendFun2(item.stockPoolInfo) %} {% endcall %}
+                <div>{{ item.continueDaysText }}，合计涨/跌百分比：<b>{{ item.upOrDownContinuePercent }}%</b>，当天: <b>{{ item.lows[4] }}%</b></div>
+                <div>
+                    推荐购买 <span class="c7">{{ item.info.buyNum2 }}</span>({{ item.info.buyNum }}) 股，
+                    成本为 <span class="c7"> {{ item.info.buyNum2*item.lows[1] }} </span> 元
+                </div>
+                <div>【PB/TTM/LYR】{{item.info.pb}}/{{item.info.pe_ttm}}/{{item.info.pe_lyr}}</div>
+
+                <!-- 股息率、roe大于特定值时候，标色 -->
+                {% if (item.info.roe2 > 20) and (item.info.dividendRate > 5) %}
+                    <div>【EPS/每股净资产/ROE（季）/ROE（年）/股息率】{{item.info.eps}}/{{item.info.net_assets}}/{{item.info.roe}}%/ <span class="roe_guxi">GOOD RR{{item.info.roe2}}% / DD{{item.info.dividendRate}}%</span></div>
+                {% elif (item.info.roe2 > 20) and (item.info.dividendRate <= 5) %}
+                    <div>【EPS/每股净资产/ROE（季）/ROE（年）/股息率】{{item.info.eps}}/{{item.info.net_assets}}/{{item.info.roe}}%/ <span class="roe">RR{{item.info.roe2}}%</span> / D{{item.info.dividendRate}}%</div>
+                {% elif (item.info.roe2 <= 20) and (item.info.dividendRate > 5) %}
+                    <div>【EPS/每股净资产/ROE（季）/ROE（年）/股息率】{{item.info.eps}}/{{item.info.net_assets}}/{{item.info.roe}}%/ R{{item.info.roe2}}% / <span class="guxi">DD{{item.info.dividendRate}}%</span></div>
+                {% else %}
+                    <div>【EPS/每股净资产/ROE（季）/ROE（年）/股息率】{{item.info.eps}}/{{item.info.net_assets}}/{{item.info.roe}}%/ R{{item.info.roe2}}% / D{{item.info.dividendRate}}%</div>
+                {% endif %}
+
+
+                <div>N年内低点 {{ item.lows[0] }}</div>
+                <div>N年内卖点占比 {{ item.percents[0] }}，平均 {{ item.percents[1] }}</div>
+                <div>总股本 {{ item.info.totalShares2 }} 亿</div>
+
+                {% if item.profit[1]>0 %}
+                    <div>最近季度利润  {{ item.profit[1] }} 亿</div>
+                {% else %}
+                    <div>最近季度利润  <span class="c1">{{ item.profit[1] }}</span> 亿</div>
+                {% endif %}
+                
+                <div>{{ item.profit[0] }}  </div>
+                <div>{{ item.cashFlow[0] }}</div>
+                <div>{{ item.cashFlow[1] }}</div>
+                <div>{{ item.cashFlow[2] }}</div>
+
+                
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</body>
+</html>

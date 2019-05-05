@@ -1,0 +1,63 @@
+[
+    {
+        "industry":"水泥",
+        "symbol": "SZ002233", 
+        "name": "塔牌集团",
+        "number":500,
+        "sPrice": 11.180,
+        "sPB":1.64,
+        "latestCost": 5590,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"港口",
+        "symbol": "SH600717", 
+        "name": "天津港",
+        "number":1200,
+        "sPrice": 10.266,
+        "sPB":1.27,
+        "latestCost": 11132,
+        "jiacang": 1,
+        "info":"6.19大暴跌，补400股"
+    }
+    ,{
+        "industry":"电气",
+        "symbol": "SH600525", 
+        "name": "长园集团",
+        "number":1800,
+        "sPrice": 7.42,
+        "sPB":1.14,
+        "latestCost": 12063,
+        "jiacang": 2,
+        "info":"20181015周一，跌逾-20%，补300股（1776元）",
+        "info2":"20181227周四，跌逾-36%，补300股（1400元左右），因为子公司财务造假，连续2跌停。"
+    }
+    ,{
+        "industry":"房地产",
+        "symbol": "SH600717", 
+        "name": "粤泰股份",
+        "number":4000,
+        "sPrice": 2.41,
+        "sPB":1.0,
+        "latestCost": 9640,
+        "jiacang": 0,
+        "info":""
+    }
+    ,{
+        "industry":"机械设备",
+        "symbol": "SH600894", 
+        "name": "广日股份",
+        "number":1600,
+        "sPrice": 5.74,
+        "sPB":0.74,
+        "latestCost": 9184,
+        "jiacang": 0,
+        "info":""
+    }
+    
+
+
+
+]
+
+

@@ -1,0 +1,285 @@
+[ 
+    {
+        "industry":"铝",
+        "symbol": "SZ002501", 
+        "name": "利源精制",
+        "number":2500,
+        "sPrice": 3.9,
+        "sPB":0.58,
+        "latestCost":9750,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"造纸",
+        "symbol": "SH600308", 
+        "name": "华泰股份",
+        "number":2100,
+        "sPrice": 4.69,
+        "sPB":0.75,
+        "latestCost":9849,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"房地产",
+        "symbol": "SZ000926", 
+        "name": "福星股份",
+        "number":1400,
+        "sPrice": 6.72,
+        "sPB":0.64,
+        "latestCost":9408,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"银行",
+        "symbol": "SH600015", 
+        "name": "华夏银行",
+        "number":1300,
+        "sPrice": 7.43,
+        "sPB":0.64,
+        "latestCost":9659,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"钢铁",
+        "symbol": "SZ000709", 
+        "name": "河钢股份",
+        "number":3200,
+        "sPrice": 2.89,
+        "sPB":0.67,
+        "latestCost":9248,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"高速公路",
+        "symbol": "SH600269", 
+        "name": "赣粤高速",
+        "number":2200,
+        "sPrice": 4.11,
+        "sPB":0.66,
+        "latestCost":9042,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"贸易",
+        "symbol": "SZ000564", 
+        "name": "供销大集",
+        "number":3800,
+        "sPrice": 3.48,
+        "sPB":0.68,
+        "latestCost":12524,
+        "jiacang": 1,
+        "info":"20181011美股大跌引起的A股大跌，补仓1000，当前pb0.51！"
+    }
+    ,{
+        "industry":"汽车",
+        "symbol": "SZ000625", 
+        "name": "长安汽车",
+        "number":1300,
+        "sPrice": 7.68,
+        "sPB":0.75,
+        "latestCost":12124,
+        "jiacang": 1,
+        "info":"181015下跌超-20%，但是这个加仓买的另外一个pb更低的同行业股票众泰汽车。latestCost为在之前的基础上加上买众泰的latestCost"
+    }
+    ,{
+        "industry":"汽车",
+        "symbol": "SZ000980", 
+        "name": "众泰汽车",
+        "number":500,
+        "sPrice": 4.28,
+        "sPB":0.51,
+        "latestCost":2140,
+        "jiacang": 0,
+        "info":"181015买入，注意这个是为长安汽车而补的！"
+    }
+    ,{
+        "industry":"证券",
+        "symbol": "SH600837", 
+        "name": "海通证券",
+        "number":600,
+        "sPrice": 8.87,
+        "sPB":0.86,
+        "latestCost":3110,
+        "jiacang": 0,
+        "info":"190225 大盘疯涨，减半卖出（-500）！",
+        "info2":"latestCost的计算方式就是，卖出后的成本价格*股数"
+    }
+    ,{
+        "industry":"传媒",
+        "symbol": "SZ002354", 
+        "name": "天神娱乐",
+        "number":1600,
+        "sPrice": 7.69,
+        "sPB":0.78,
+        "latestCost":11681,
+        "jiacang": 1,
+        "info":"十一后大跌超-20%，买入400股"
+    }
+
+
+
+    ,{
+        "industry":"家具",
+        "symbol": "SH600978", 
+        "name": "宜华生活",
+        "number":3000,
+        "sPrice": 5.72,
+        "sPB":1.06,
+        "latestCost":14649,
+        "jiacang": 2,
+        "info":"20181012跌超-23%左右，买入400股",
+        "info2":"20190129 跌超-36%，买入600股（本应200，因为财报不错，我稍作调整）"
+    }
+    ,{
+        "industry":"水务",
+        "symbol": "SH600168", 
+        "name": "武汉控股",
+        "number":1500,
+        "sPrice": 6.29,
+        "sPB":0.93,
+        "latestCost":9435,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"医药",
+        "symbol": "SZ300158", 
+        "name": "振东制药",
+        "number":2400,
+        "sPrice": 4.04,
+        "sPB":0.76,
+        "latestCost":9696,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"煤炭",
+        "symbol": "SZ000937", 
+        "name": "冀中能源",
+        "number":2400,
+        "sPrice": 4.14,
+        "sPB":0.74,
+        "latestCost":9941,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"电气",
+        "symbol": "SH600089", 
+        "name": "特变电工",
+        "number":1500,
+        "sPrice": 6.59,
+        "sPB":0.87,
+        "latestCost":9885,
+        "jiacang": 0
+    }
+
+
+
+
+
+    ,{
+        "industry":"家用电器",
+        "symbol": "SH600060", 
+        "name": "海信电器",
+        "number":1100,
+        "sPrice": 10.5,
+        "sPB":0.96,
+        "latestCost":11138,
+        "jiacang": 1,
+        "info":"20190103 下跌超20%，补200股，1700元"
+    }
+    ,{
+        "industry":"服装",
+        "symbol": "SZ002029", 
+        "name": "七匹狼",
+        "number":1400,
+        "sPrice": 6.83,
+        "sPB":0.91,
+        "latestCost":9562,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"基础建设",
+        "symbol": "SH600284", 
+        "name": "浦东建设",
+        "number":1900,
+        "sPrice": 5.17,
+        "sPB":0.89,
+        "latestCost":9823,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"化学原料",
+        "symbol": "SZ002092", 
+        "name": "中泰化学",
+        "number":1300,
+        "sPrice": 8.94,
+        "sPB":1.03,
+        "latestCost":11258,
+        "jiacang": 1,
+        "info":"20190102 下跌超20%，可补200股，1400元"
+    }
+    ,{
+        "industry":"电力",
+        "symbol": "SH600642", 
+        "name": "申能股份",
+        "number":1900,
+        "sPrice": 5.06,
+        "sPB":0.88,
+        "latestCost":9614,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"化工",
+        "symbol": "SZ000059", 
+        "name": "华锦股份",
+        "number":1400,
+        "sPrice": 7.01,
+        "sPB":0.84,
+        "latestCost":9814,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"综合",
+        "symbol": "SH600051", 
+        "name": "宁波联合",
+        "number":2000,
+        "sPrice": 6.21,
+        "sPB":0.82,
+        "latestCost":11914,
+        "jiacang": 1,
+        "info":"20181018跌超-20%，买入400股，成本1968。"
+    }
+    ,{
+        "industry":"纺织",
+        "symbol": "SZ002087", 
+        "name": "新野纺织",
+        "number":2700,
+        "sPrice": 3.7,
+        "sPB":0.93,
+        "latestCost":9990,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"珠宝",
+        "symbol": "SZ000587", 
+        "name": "金洲慈航",
+        "number":3600,
+        "sPrice": 2.741,
+        "sPB":0.6,
+        "latestCost":9867,
+        "jiacang": 0
+    }
+    ,{
+        "industry":"航空",
+        "symbol": "SH600221", 
+        "name": "海航控股",
+        "number":4600,
+        "sPrice": 2.14,
+        "sPB":0.67,
+        "latestCost":9844,
+        "jiacang": 0
+    }
+
+
+]
+
+
